@@ -63,7 +63,7 @@
 							<?php
 							$query = mysqli_query($link, "SELECT DISTINCT(course_id),c_name FROM course NATURAL JOIN dept WHERE c_sem = '" . $_SESSION['user_sem'] . "' AND dept_id = '" . $_SESSION['user_dep'] . "' AND course_id NOT IN (SELECT c_id FROM enrolled WHERE std_id = '" . $_SESSION['user_id'] . "' )");
 							$row_cnt = mysqli_num_rows($query);
-							echo(mysqli_error($link));
+							echo (mysqli_error($link));
 							if (!$row_cnt != 0) {
 								echo "No available courses .. redirecting ...";
 							} else {

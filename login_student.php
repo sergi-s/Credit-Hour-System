@@ -84,8 +84,6 @@
 		if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/", $e_id)) {
 			$msg = "Invalid email";
 		} else {
-
-
 			if ($link) {
 				$query = mysqli_query($link, "SELECT * FROM stud_info WHERE e_id='" . $e_id . "'");
 				$row_cnt = mysqli_num_rows($query);
@@ -102,8 +100,7 @@
 					//echo $_SESSION['user_name'],$_SESSION['login_lev'];
 					$msg = "Login Successful";
 					header('refresh:1;url=student.php');
-				} 
-				else {
+				} else {
 					$msg = "Invalid email";
 				}
 			}

@@ -19,7 +19,8 @@
 			margin-right: 30px;
 			text-align: right;
 		}
-		fieldset {
+
+		.fieldset {
 			border: none;
 			width: 500px;
 			margin: 0px auto;
@@ -32,6 +33,7 @@
 			left: 0px;
 			top: 0px;
 			z-index: -1;
+			color: white
 		}
 
 		.stretch {
@@ -40,17 +42,17 @@
 		}
 	</style>
 
-	<body link="EEEEEE">
+	<body>
 		<div id="background">
 			<img src="Images/bg1.jpg" class="stretch" alt="" />
 		</div>
 		<font color="white">
 			<a title="Add Course"><img src="Images/course.png" width="220" height="180" /></a><br />
 
-			<div id="header">
+			<div>
 				<h2 id="h2">Add Course</h2>
 			</div>
-			<fieldset>
+			<div class="fieldset">
 				<form name="new_course" id="cform" method="POST" action="">
 					<div id="formdiv">
 						<div id="inputbox">
@@ -76,7 +78,7 @@
 								while ($res = mysqli_fetch_array($query)) {
 								?>
 
-									<option value="<?php echo $res['teacher_id']; ?>"><?php echo $res['t_name'], ":", $res['dept_name']; ?></option>
+									<option value="<?php echo $res['teacher_id']; ?>"><?php echo $res['t_name'], ":\t\t", $res['dept_name']; ?></option>
 
 								<?php
 								}
@@ -102,7 +104,7 @@
 							<input type="submit" name="submit" class="button" value="ADD">
 						</div>
 				</form>
-				</div> </br>
+			</div> </br>
 			</fieldset>
 			<a href="admin.php">Go Back</a></br>
 	</body>
