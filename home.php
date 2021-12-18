@@ -35,13 +35,13 @@
 	}
 </style>
 
-<body link="EEEEEE">
+<body>
 	<div id="background">
 		<img src="Images/home.jpg" class="stretch" alt="" />
 	</div>
 	<center>
-		<h1>NETAJI SUBHAS TECHNOLOGICAL UNIVERSITY OF DELHI</h1>
-		<p>Welcome to the online portal of NSTUD. Which action would you like to perform?</p>
+		<h1>Faculty of Science, Alexadria University</h1>
+		<p>Welcome to the Our Credit hours System. Which roll are you?</p>
 
 		<table>
 			<tr>
